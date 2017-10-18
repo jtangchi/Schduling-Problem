@@ -2,7 +2,7 @@
 
 author: Chi Tang
 
-1. In this note book, we generate a schdule to properly arrange the working time of nurses given their available time. 
+1. We generate a schdule to properly arrange the working time of nurses given their available time. 
 2. The maximum working time per week for each people can be adjusted accordingly. The total time of each nurse's working
 time cannot exceed the maximum working time.
 3. The samples of each nurse's time schedule are generated randomly. By loading the real data, we can improve the algorithm
