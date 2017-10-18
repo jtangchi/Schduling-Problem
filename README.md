@@ -4,7 +4,7 @@ scheduling code in jupyter notebook
 ## Nurse_schedule.py
 scheduling code in python file
 
-##figs
+## figs
 contain output figs of arrangement
 
 ## utils
