@@ -1,0 +1,6 @@
+,Mon,Tue,Wed,Thur,Fri,Sat,Sun
+8:00 - 10:00,Mon_1,Tue_1,Not_available,Thur_1,Fri_1,Sat_1,Sun_1
+10:00 - 12:00,Mon_2,Not_available,Not_available,Thur_2,Fri_2,Sat_2,Sun_2
+12:00 - 14:00,Mon_3,Tue_3,Wed_3,Not_available,Fri_3,Sat_3,Not_available
+14:00 - 16:00,Not_available,Tue_4,Wed_4,Not_available,Not_available,Sat_4,Sun_4
+16:00 - 18:00,Mon_5,Tue_5,Wed_5,Thur_5,Not_available,Not_available,Sun_5
