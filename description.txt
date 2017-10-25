@@ -1,0 +1,29 @@
+Each day is divided into 2 separate shifts of 12 hours (day/night).
+
+There are a number of required nurses for each of them. 
+
+A nurse is off on a specific day if no shift is assigned or if the nurse has requested a PTO on that specific day. 
+
+The planning length is 4 weeks (28 days). 
+
+Each nurse should work either 12, 24 or 36 hours hours per week.
+
+* No nurse will work on both shifts in the single day.
+* A nurse who works on today's night will not work on next day.
+
+
+The problem can be decomposed into three independent stages.
+
+1. Check there are enough nurses to provide adequate cover. 
+2. The second stage assigns the nurses to the correct number of day or night shifts. 
+3. A final phase allocates those working on particular day to the early or late shift on that day. 
+
+
+For each nurse i and
+each shift pattern j all the information concerning the desirability of the pattern for this nurse is captured in a
+single numeric preference cost pij.
+
+pij: Basic shift-pattern cost, general day / night preferences, specific requests, continuity
+problems, number of successive working day, rotating nights / weekends and other working history information
+
+
