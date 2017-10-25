@@ -28,33 +28,16 @@
 
 * Constraints and objective function can be represented as equality and inequality equations.
 
-\begin{equation}
-    x_{ns}= 
-        \begin{cases}
-            0, &\text{nurse n will not work on shift s}\ \\
-            1, &\text{nurse n will work on shift s}\
-        \end{cases}
-\end{equation}
-
+   x_ns = 0 when nurse n will not work on shift s
+          1 when nurse n will work on shift s
+      
 * s: each shift
 
 * n: each nurse
 
 * r: list storing the required nurses in each day.
 
-
-\begin{equation}
-    \text{r} = [\text{number of nurses required in specific shift s}] \\
-    \text{r[even index]} = [\text{number of nurses required in day shifts}] \\
-    \text{r[odd index]} = [\text{number of nurses required in night shifts}] 
-\end{equation}
-
 * PTO = Dictionary which stores the information of the off-work shifts(nurses requested PTO or other reasons)
-
-\begin{equation}
-    \text{PTO} = \{n : [\text{list of off-work shifts for nurse n}]\}
-\end{equation}
-
 
 * daily_shift: [0, 1, 2, ...] in this case. The last element is late night shift.
 
@@ -71,6 +54,13 @@
 ## Result:
 
 ![Alt text](/figs/5shifts4weeks/nurse_scheduling.png?raw=true "Optional Title")
+
+Horizontal: work shifts from week1 Monday to week4 Sunday.
+Vertical: Nurse_id
+orange: late night shift
+pink:  nurse is working on that shift
+gray: nurse is off work on that shift. 
+
 
 ## Nurse_schedule_2shifts_1week.ipynb
 nurse scheduling code in jupyter notebook for the simple case
