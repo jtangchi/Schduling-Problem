@@ -1,23 +1,9 @@
 # Nurse scheduling problem
 
-## Nurse_schedule.ipynb
-scheduling code in jupyter notebook
-
-## Nurse_schedule.py
-scheduling code in python file
-
-## figs
-contain output figs of arrangement
-
-## utils
-randomly generated nurse schedule data and save few processed data
-
-## Nurse scheduling problem 
-
 ## Implementing linear programming  algorithm to solve the NP-hard nurse scheduling problem. 
 
 
-## Now more general cases:
+## General constraints and assumptions:
 
 * Each day is divided into multiple shifts(usually 2-4).
 
@@ -25,7 +11,7 @@ randomly generated nurse schedule data and save few processed data
 
 * A nurse is off on a specific day if no shift is assigned or if the nurse has requested a PTO on that specific day. 
 
-* The planning length is flexible (test case using 4 weeks). 
+* The planning length is flexible (1-4 weeks, or more). 
     
 * Each nurse should work in range(max_nurse_shifts), let's say max 5 shifts per week.
 
@@ -38,17 +24,17 @@ randomly generated nurse schedule data and save few processed data
 
 ## Model:
 
-* Essential idea is to introduce a binary variable ***x_ns*** in order to linearize the model
+* Essential idea is to introduce a binary variable x_ns in order to linearize the model
 
 * Constraints and objective function can be represented as equality and inequality equations.
 
-\begin{align}
+\begin{equation}
     x_{ns}= 
         \begin{cases}
             0, &\text{nurse n will not work on shift s}\ \\
             1, &\text{nurse n will work on shift s}\
         \end{cases}
-\end{align}
+\end{equation}
 
 * s: each shift
 
@@ -57,17 +43,17 @@ randomly generated nurse schedule data and save few processed data
 * r: list storing the required nurses in each day.
 
 
-\begin{align}
+\begin{equation}
     \text{r} = [\text{number of nurses required in specific shift s}] \\
     \text{r[even index]} = [\text{number of nurses required in day shifts}] \\
     \text{r[odd index]} = [\text{number of nurses required in night shifts}] 
-\end{align}
+\end{equation}
 
 * PTO = Dictionary which stores the information of the off-work shifts(nurses requested PTO or other reasons)
 
-\begin{align}
+\begin{equation}
     \text{PTO} = \{n : [\text{list of off-work shifts for nurse n}]\}
-\end{align}
+\end{equation}
 
 
 * daily_shift: [0, 1, 2, ...] in this case. The last element is late night shift.
@@ -80,3 +66,21 @@ randomly generated nurse schedule data and save few processed data
 
 
 * Implementing linear programming with pulp python package to find the solution of this constrained optimization problem. 
+
+
+## Result:
+
+![Alt text](/figs/5shifts4weeks/nurse_scheduling.png?raw=true "Optional Title")
+
+## Nurse_schedule_2shifts_1week.ipynb
+nurse scheduling code in jupyter notebook for the simple case
+
+## nurse_scheduling_general.py
+A more general case in python file
+
+## figs
+contain output figs of the scheduling
+
+## utils
+1. off_shift dictionary that can be updated
+2. output the scheduling into csv
