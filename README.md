@@ -28,7 +28,7 @@
 
 * Constraints and objective function can be represented as equality and inequality equations.
 
-   x_ns = 0 when nurse n will not work on shift s
+   x_ns = 0 when nurse n will not work on shift s \\
           1 when nurse n will work on shift s
       
 * s: each shift
