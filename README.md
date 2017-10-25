@@ -55,11 +55,11 @@
 
 ![Alt text](/figs/5shifts4weeks/nurse_scheduling.png?raw=true "Optional Title")
 
-Horizontal: work shifts from week1 Monday to week4 Sunday.
-Vertical: Nurse_id
-orange: late night shift
-pink:  nurse is working on that shift
-gray: nurse is off work on that shift. 
+* Horizontal: work shifts from week1 Monday to week4 Sunday.
+* Vertical: Nurse_id
+* orange: late night shift
+* pink:  nurse is working on that shift
+* gray: nurse is off work on that shift. 
 
 
 ## Nurse_schedule_2shifts_1week.ipynb
